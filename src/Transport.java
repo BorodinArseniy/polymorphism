@@ -49,4 +49,7 @@ public abstract class Transport {
                 "model='" + model + '\'' +
                 '}';
     }
+
+    public void printType(){}
+
 }
