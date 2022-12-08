@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Car extends Transport implements Competiting {
 
     private BodyType bodyType;
@@ -33,6 +35,11 @@ public class Car extends Transport implements Competiting {
         } else {
             System.out.println(bodyType);
         }
+    }
+
+    @Override
+    public boolean service() {
+        return Math.random()>0.5;
     }
 
     @Override

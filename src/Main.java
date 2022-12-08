@@ -7,6 +7,9 @@ public class Main {
         Bus bus = new Bus("Mercedes", "Bus", 150.00, Bus.Capacity.SMALL);
 
         car.pitStop();
+        car.service();
+        car.maxSpeed();
+        bus.bestTimeARough();
 
         DriverD carDriver = new DriverD("null", true, 10);
         System.out.println(carDriver.getCarMessage(bus));

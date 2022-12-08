@@ -48,6 +48,11 @@ public class Bus extends Transport implements Competiting {
     }
 
     @Override
+    public boolean service() {
+        return true;
+    }
+
+    @Override
     public void pitStop() {
         this.stopMoving();
         System.out.println("Getting fixed");

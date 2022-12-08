@@ -21,5 +21,6 @@ public class DriverC<T extends Truck & Competiting> extends Driver{
     public String getCarMessage(T truck) {
         return "Driver " + getName() + " is driving truck " + truck.getModel() + " " + " participates in the race";
     }
+    //
 
 }
