@@ -3,10 +3,21 @@ import java.util.Random;
 public class Car extends Transport implements Competiting {
 
     private BodyType bodyType;
+    private DriverB driver;
 
-    public Car(String brand, String model, double engineVolume, BodyType bodyType) {
+
+    public Car(String brand, String model, double engineVolume, BodyType bodyType, DriverB driver) {
         super(brand, model, engineVolume);
         this.bodyType = bodyType;
+        this.driver = driver;
+    }
+
+    public void setDriver(DriverB driver) {
+        this.driver = driver;
+    }
+
+    public DriverB getDriver() {
+        return driver;
     }
 
     public BodyType getBodyType() {
@@ -41,7 +52,10 @@ public class Car extends Transport implements Competiting {
     public boolean service() {
         return Math.random()>0.5;
     }
-
+    @Override
+    public boolean repair() {
+        return true;
+    }
     @Override
     public void pitStop() {
         stopMoving();

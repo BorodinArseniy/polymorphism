@@ -1,10 +1,20 @@
 public class Truck extends Transport implements Competiting {
 
     LoadCapacity loadCapacity;
+    DriverC driverC;
 
-    public Truck(String brand, String model, double engineVolume, LoadCapacity loadCapacity) {
+    public Truck(String brand, String model, double engineVolume, LoadCapacity loadCapacity, DriverC driverC) {
         super(brand, model, engineVolume);
         this.loadCapacity = loadCapacity;
+        this.driverC = driverC;
+    }
+
+    public DriverC getDriverC() {
+        return driverC;
+    }
+
+    public void setDriverC(DriverC driverC) {
+        this.driverC = driverC;
     }
 
     public LoadCapacity getLoadCapacity() {
@@ -49,7 +59,10 @@ public class Truck extends Transport implements Competiting {
     public boolean service() {
         return Math.random()>0.75;
     }
-
+    @Override
+    public boolean repair() {
+        return true;
+    }
 
 
     @Override

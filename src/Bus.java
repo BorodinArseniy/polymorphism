@@ -1,10 +1,12 @@
 public class Bus extends Transport implements Competiting {
 
     Capacity capacity;
+    DriverD driver;
 
-    public Bus(String brand, String model, double engineVolume, Capacity capacity) {
+    public Bus(String brand, String model, double engineVolume, Capacity capacity, DriverD driver) {
         super(brand, model, engineVolume);
         this.capacity = capacity;
+        this.driver = driver;
     }
 
     public Capacity getCapacity() {
@@ -13,6 +15,14 @@ public class Bus extends Transport implements Competiting {
 
     public void setCapacity(Capacity capacity) {
         this.capacity = capacity;
+    }
+
+    public void setDriver(DriverD driver) {
+        this.driver = driver;
+    }
+
+    public DriverD getDriver() {
+        return driver;
     }
 
     public enum Capacity {
@@ -49,6 +59,11 @@ public class Bus extends Transport implements Competiting {
 
     @Override
     public boolean service() {
+        return true;
+    }
+
+    @Override
+    public boolean repair() {
         return true;
     }
 
