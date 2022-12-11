@@ -22,6 +22,6 @@ public class DriverB<T extends Car & Competiting> extends Driver{
         return "Driver " + getName() + " is driving car " +
                 "" + car.getModel() + " " + " participates in the race";
     }
-
+//
 }
 
